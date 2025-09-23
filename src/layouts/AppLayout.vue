@@ -17,17 +17,19 @@ const socialLinks = [
 
 <template>
     <div class="min-h-screen bg-base-100 relative">
-        <!-- Particles Background -->
-        <ParticlesBackground />
-
-        <!-- Custom Cursor -->
-        <Cursor />
 
         <!-- Header -->
         <AppHeader />
 
         <!-- Main Content -->
         <main class="container mx-auto px-4 py-8 relative z-10">
+            <!-- Particles Background -->
+            <ParticlesBackground />
+
+            <!-- Custom Cursor -->
+            <Cursor />
+
+            <!-- Router View -->
             <router-view />
         </main>
 
