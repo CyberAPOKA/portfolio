@@ -47,7 +47,7 @@ const goToContact = () => {
 <template>
     <div>
         <!-- Hero Section -->
-        <div class="hero min-h-screen bg-base-200">
+        <div class="flex flex-col items-center justify-center min-h-screen pb-16">
             <div class="hero-content text-center">
                 <div class="max-w-md">
                     <h1 class="text-5xl font-bold text-primary">Welcome to My Portfolio</h1>
@@ -66,7 +66,7 @@ const goToContact = () => {
             <h2 class="text-3xl font-bold text-center mb-8 text-base-content">Featured Projects</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Card v-for="project in projects" :key="project.id" :title="project.title" bordered>
+                <Card v-for="project in projects" :key="project.id" :title="project.title" bordered glass>
                     <p class="text-base-content">{{ project.description }}</p>
                     <div class="card-actions justify-end">
                         <Button variant="primary" size="sm">View Project</Button>
@@ -80,7 +80,8 @@ const goToContact = () => {
             <h2 class="text-3xl font-bold text-center mb-8 text-base-content">Skills & Technologies</h2>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div v-for="skill in skills" :key="skill.name" class="text-center p-4 bg-base-100 rounded-lg shadow">
+                <div v-for="skill in skills" :key="skill.name"
+                    class="text-center p-4 bg-base-100 rounded-lg shadow glass">
                     <div class="text-2xl mb-2">{{ skill.icon }}</div>
                     <h3 class="font-semibold">{{ skill.name }}</h3>
                 </div>
@@ -89,7 +90,7 @@ const goToContact = () => {
 
         <!-- CTA Section -->
         <div class="container mx-auto p-8">
-            <div class="hero bg-base-200 rounded-lg">
+            <div class="hero bg-base-200 rounded-lg glass">
                 <div class="hero-content text-center">
                     <div class="max-w-md">
                         <h2 class="text-3xl font-bold text-primary">Let's Work Together</h2>
