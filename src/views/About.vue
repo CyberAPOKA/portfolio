@@ -1,3 +1,56 @@
+<script setup>
+import { ref } from 'vue'
+import Button from '@/components/daisyui/Button.vue'
+import Card from '@/components/daisyui/Card.vue'
+
+const experiences = ref([
+    {
+        id: 1,
+        title: 'Senior Frontend Developer',
+        company: 'Tech Corp',
+        period: '2022 - Present',
+        description: 'Leading frontend development for enterprise applications using Vue.js and modern web technologies.'
+    },
+    {
+        id: 2,
+        title: 'Full Stack Developer',
+        company: 'StartupXYZ',
+        period: '2020 - 2022',
+        description: 'Developed full-stack web applications using Vue.js, Node.js, and PostgreSQL.'
+    },
+    {
+        id: 3,
+        title: 'Junior Developer',
+        company: 'Web Solutions Inc',
+        period: '2019 - 2020',
+        description: 'Built responsive websites and web applications using HTML, CSS, and JavaScript.'
+    }
+])
+
+const certifications = ref([
+    {
+        id: 1,
+        name: 'Vue.js Certified Developer',
+        issuer: 'Vue.js Official'
+    },
+    {
+        id: 2,
+        name: 'AWS Cloud Practitioner',
+        issuer: 'Amazon Web Services'
+    },
+    {
+        id: 3,
+        name: 'JavaScript Algorithms',
+        issuer: 'FreeCodeCamp'
+    },
+    {
+        id: 4,
+        name: 'Responsive Web Design',
+        issuer: 'FreeCodeCamp'
+    }
+])
+</script>
+
 <template>
     <div class="max-w-4xl mx-auto">
         <!-- About Hero -->
@@ -96,56 +149,3 @@
         </div>
     </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import Button from '@/components/daisyui/Button.vue'
-import Card from '@/components/daisyui/Card.vue'
-
-const experiences = ref([
-    {
-        id: 1,
-        title: 'Senior Frontend Developer',
-        company: 'Tech Corp',
-        period: '2022 - Present',
-        description: 'Leading frontend development for enterprise applications using Vue.js and modern web technologies.'
-    },
-    {
-        id: 2,
-        title: 'Full Stack Developer',
-        company: 'StartupXYZ',
-        period: '2020 - 2022',
-        description: 'Developed full-stack web applications using Vue.js, Node.js, and PostgreSQL.'
-    },
-    {
-        id: 3,
-        title: 'Junior Developer',
-        company: 'Web Solutions Inc',
-        period: '2019 - 2020',
-        description: 'Built responsive websites and web applications using HTML, CSS, and JavaScript.'
-    }
-])
-
-const certifications = ref([
-    {
-        id: 1,
-        name: 'Vue.js Certified Developer',
-        issuer: 'Vue.js Official'
-    },
-    {
-        id: 2,
-        name: 'AWS Cloud Practitioner',
-        issuer: 'Amazon Web Services'
-    },
-    {
-        id: 3,
-        name: 'JavaScript Algorithms',
-        issuer: 'FreeCodeCamp'
-    },
-    {
-        id: 4,
-        name: 'Responsive Web Design',
-        issuer: 'FreeCodeCamp'
-    }
-])
-</script>

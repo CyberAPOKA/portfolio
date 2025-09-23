@@ -1,3 +1,49 @@
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import Button from '@/components/daisyui/Button.vue'
+import Card from '@/components/daisyui/Card.vue'
+
+const router = useRouter()
+
+const projects = ref([
+    {
+        id: 1,
+        title: 'E-commerce Platform',
+        description: 'A full-stack e-commerce solution built with Vue.js and Node.js'
+    },
+    {
+        id: 2,
+        title: 'Task Management App',
+        description: 'A collaborative task management application with real-time updates'
+    },
+    {
+        id: 3,
+        title: 'Portfolio Website',
+        description: 'A responsive portfolio website showcasing my work and skills'
+    }
+])
+
+const skills = ref([
+    { name: 'Vue.js', icon: '⚡' },
+    { name: 'JavaScript', icon: '🟨' },
+    { name: 'CSS', icon: '🎨' },
+    { name: 'Node.js', icon: '🟢' },
+    { name: 'Python', icon: '🐍' },
+    { name: 'React', icon: '⚛️' },
+    { name: 'TypeScript', icon: '🔷' },
+    { name: 'Git', icon: '📦' }
+])
+
+const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+}
+
+const goToContact = () => {
+    router.push('/contact')
+}
+</script>
+
 <template>
     <div>
         <!-- Hero Section -->
@@ -59,49 +105,3 @@
         </div>
     </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import Button from '@/components/daisyui/Button.vue'
-import Card from '@/components/daisyui/Card.vue'
-
-const router = useRouter()
-
-const projects = ref([
-    {
-        id: 1,
-        title: 'E-commerce Platform',
-        description: 'A full-stack e-commerce solution built with Vue.js and Node.js'
-    },
-    {
-        id: 2,
-        title: 'Task Management App',
-        description: 'A collaborative task management application with real-time updates'
-    },
-    {
-        id: 3,
-        title: 'Portfolio Website',
-        description: 'A responsive portfolio website showcasing my work and skills'
-    }
-])
-
-const skills = ref([
-    { name: 'Vue.js', icon: '⚡' },
-    { name: 'JavaScript', icon: '🟨' },
-    { name: 'CSS', icon: '🎨' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'React', icon: '⚛️' },
-    { name: 'TypeScript', icon: '🔷' },
-    { name: 'Git', icon: '📦' }
-])
-
-const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
-}
-
-const goToContact = () => {
-    router.push('/contact')
-}
-</script>

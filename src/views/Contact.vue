@@ -1,3 +1,59 @@
+<script setup>
+import { ref } from 'vue'
+import Button from '@/components/daisyui/Button.vue'
+import Alert from '@/components/daisyui/Alert.vue'
+
+const form = ref({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+})
+
+const isSubmitting = ref(false)
+const showMessage = ref(false)
+const messageType = ref('success')
+const messageText = ref('')
+
+const submitForm = async () => {
+    isSubmitting.value = true
+
+    try {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 2000))
+
+        // Reset form
+        form.value = {
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+        }
+
+        // Show success message
+        messageType.value = 'success'
+        messageText.value = 'Thank you for your message! I\'ll get back to you soon.'
+        showMessage.value = true
+
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            showMessage.value = false
+        }, 5000)
+
+    } catch (error) {
+        messageType.value = 'error'
+        messageText.value = 'Sorry, there was an error sending your message. Please try again.'
+        showMessage.value = true
+
+        setTimeout(() => {
+            showMessage.value = false
+        }, 5000)
+    } finally {
+        isSubmitting.value = false
+    }
+}
+</script>
+
 <template>
     <div class="max-w-4xl mx-auto">
         <!-- Contact Hero -->
@@ -146,59 +202,3 @@
         </div>
     </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import Button from '@/components/daisyui/Button.vue'
-import Alert from '@/components/daisyui/Alert.vue'
-
-const form = ref({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-})
-
-const isSubmitting = ref(false)
-const showMessage = ref(false)
-const messageType = ref('success')
-const messageText = ref('')
-
-const submitForm = async () => {
-    isSubmitting.value = true
-
-    try {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 2000))
-
-        // Reset form
-        form.value = {
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        }
-
-        // Show success message
-        messageType.value = 'success'
-        messageText.value = 'Thank you for your message! I\'ll get back to you soon.'
-        showMessage.value = true
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            showMessage.value = false
-        }, 5000)
-
-    } catch (error) {
-        messageType.value = 'error'
-        messageText.value = 'Sorry, there was an error sending your message. Please try again.'
-        showMessage.value = true
-
-        setTimeout(() => {
-            showMessage.value = false
-        }, 5000)
-    } finally {
-        isSubmitting.value = false
-    }
-}
-</script>
