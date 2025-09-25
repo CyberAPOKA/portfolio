@@ -24,7 +24,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div id="particles-js" class="fixed inset-0" style="z-index: 999999999999999;"></div>
+    <div id="particles-js" class="fixed inset-0"></div>
 </template>
 
 <style scoped>

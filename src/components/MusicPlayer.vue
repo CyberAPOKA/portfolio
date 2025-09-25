@@ -14,12 +14,12 @@ const currentTrackIndex = ref(0)
 const playlist = ref([
     {
         title: 'She Doesn\'t Mind',
-        artist: 'Unknown Artist',
+        artist: 'Sean Paul',
         src: '/src/music/she_doesnt_mind.mp3'
     },
     {
         title: 'Drown',
-        artist: 'Unknown Artist',
+        artist: 'Karen O & Danger Mouse',
         src: '/src/music/drown.mp3'
     },
     {
@@ -28,9 +28,9 @@ const playlist = ref([
         src: '/src/music/grounded_grasslands_theme.mp3'
     },
     {
-        title: 'Fake A Smile',
-        artist: 'Unknown Artist',
-        src: '/src/music/fake_a_smile.mp3'
+        title: 'Don\'t Stop',
+        artist: 'Fake A Smile ',
+        src: '/src/music/dont_stop.mp3'
     }
 ])
 
