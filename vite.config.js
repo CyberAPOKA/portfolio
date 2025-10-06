@@ -6,13 +6,8 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/portfolio/',
-  plugins: [
-    vue(),
-    tailwindcss()
-  ],
+  plugins: [vue(), tailwindcss()],
   resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
+    alias: { '@': resolve(__dirname, 'src') }
   }
 })
