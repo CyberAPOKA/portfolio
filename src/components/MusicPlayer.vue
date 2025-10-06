@@ -2,7 +2,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import Button from '@/components/daisyui/Button.vue'
 import Card from '@/components/daisyui/Card.vue'
-import Alert from '@/components/daisyui/Alert.vue'
 
 const audioRef = ref(null)
 const isPlaying = ref(false)
@@ -13,24 +12,24 @@ const currentTrackIndex = ref(0)
 
 const playlist = ref([
     {
-        title: 'She Doesn\'t Mind',
+        title: "She Doesn't Mind",
         artist: 'Sean Paul',
-        src: '/src/music/she_doesnt_mind.mp3'
+        src: '/portfolio/music/she_doesnt_mind.mp3'
     },
     {
         title: 'Drown',
         artist: 'Karen O & Danger Mouse',
-        src: '/src/music/drown.mp3'
+        src: '/portfolio/music/drown.mp3'
     },
     {
         title: 'Grounded Grasslands Theme',
         artist: 'Unknown Artist',
-        src: '/src/music/grounded_grasslands_theme.mp3'
+        src: '/portfolio/music/grounded_grasslands_theme.mp3'
     },
     {
-        title: 'Don\'t Stop',
-        artist: 'Fake A Smile ',
-        src: '/src/music/dont_stop.mp3'
+        title: "Don't Stop",
+        artist: 'Fake A Smile',
+        src: '/portfolio/music/dont_stop.mp3'
     }
 ])
 
