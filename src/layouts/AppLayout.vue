@@ -34,9 +34,6 @@ const socialLinks = [
         </main>
 
         <!-- Footer -->
-        <footer class="mt-auto relative z-10">
-            <Footer :title="brandName" :description="footerDescription" :copyright="copyright"
-                :social-links="socialLinks" />
-        </footer>
+        <Footer />
     </div>
 </template>

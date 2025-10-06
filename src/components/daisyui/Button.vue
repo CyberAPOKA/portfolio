@@ -50,6 +50,10 @@ const props = defineProps({
     block: {
         type: Boolean,
         default: false
+    },
+    fancy: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -91,6 +95,19 @@ const buttonClasses = computed(() => {
 
     if (props.block) {
         classes.push('btn-block')
+    }
+
+    // Fancy style (keeps DaisyUI theming via currentColor/ring-current)
+    if (props.fancy) {
+        classes.push(
+            'relative overflow-hidden transition-transform duration-300',
+            'hover:scale-[1.02] active:scale-[0.98]',
+            'ring-2 ring-current/30 hover:ring-current/50',
+            'shadow-lg hover:shadow-xl',
+            'before:content-[""] before:absolute before:inset-0',
+            'before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent',
+            'before:-translate-x-full hover:before:translate-x-full before:transition-transform before:duration-700'
+        )
     }
 
     return classes.join(' ')

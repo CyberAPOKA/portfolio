@@ -1,5 +1,17 @@
+<script setup>
+
+const title = 'Portfolio'
+const description = 'A modern portfolio built with Vue.js and DaisyUI'
+const copyright = 'Copyright © 2024 - All rights reserved'
+const socialLinks = [
+    { name: 'GitHub', url: 'https://github.com/CyberAPOKA' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/christiansteffens/' },
+    { name: 'Instagram', url: 'https://www.instagram.com/christian.steffens_/' }
+]
+</script>
+
 <template>
-    <footer class="footer footer-center p-10 bg-base-200 text-base-content">
+    <footer class="mt-auto relative z-10 footer footer-center p-10 bg-base-200 text-base-content">
         <div>
             <h3 class="font-bold text-lg">{{ title }}</h3>
             <p class="max-w-md">{{ description }}</p>
@@ -14,28 +26,3 @@
         </div>
     </footer>
 </template>
-
-<script setup>
-const props = defineProps({
-    title: {
-        type: String,
-        default: 'Portfolio'
-    },
-    description: {
-        type: String,
-        default: 'A modern portfolio built with Vue.js and DaisyUI'
-    },
-    copyright: {
-        type: String,
-        default: 'Copyright © 2024 - All rights reserved'
-    },
-    socialLinks: {
-        type: Array,
-        default: () => [
-            { name: 'GitHub', url: '#' },
-            { name: 'LinkedIn', url: '#' },
-            { name: 'Twitter', url: '#' }
-        ]
-    }
-})
-</script>
