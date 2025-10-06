@@ -1,21 +1,26 @@
 <script setup>
+import { computed } from 'vue'
 import Navbar from '@/components/daisyui/Navbar.vue'
 import MusicPlayer from '@/components/MusicPlayer.vue'
 import ThemeSelector from '@/components/ThemeSelector.vue'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 
 const brandName = 'Portfolio'
 
-const menuItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
-]
+const menuItems = computed(() => [
+    { name: 'nav.home', path: '/' },
+    { name: 'nav.about', path: '/about' },
+    { name: 'nav.contact', path: '/contact' }
+])
 </script>
 
 <template>
     <header class="sticky top-0 z-50">
         <Navbar :brand-name="brandName" :menu-items="menuItems">
             <template #end>
+                <!-- Language Selector -->
+                <LanguageSelector />
+
                 <!-- Music Player -->
                 <MusicPlayer />
 

@@ -121,6 +121,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+    <!-- <div class="noise"></div> -->
     <div id="particles-js" class="fixed inset-0"></div>
 </template>
 
@@ -143,4 +144,20 @@ onUnmounted(() => {
         display: none;
     }
 }
+
+/* .noise {
+    position: fixed;
+    z-index: 9999;
+    top: -300%;
+    left: -150%;
+    height: 600%;
+    width: 600%;
+    -webkit-animation: grain 7s steps(10) infinite;
+    animation: grain 7s steps(10) infinite;
+    background-image: url(/src/assets/noise.png);
+    background-size: 200px;
+    background-repeat: repeat;
+    opacity: .25;
+    pointer-events: none;
+} */
 </style>

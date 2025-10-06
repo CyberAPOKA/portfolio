@@ -16,40 +16,7 @@
     z-index: -1;
 }
 
-/* Ensure content is above particles */
-.relative.z-10 {
-    position: relative;
-    z-index: 10;
-}
-
-/* Header should be above particles */
-header {
-    position: relative;
-    z-index: 20;
-}
-
-/* Glass effect for cards */
 .glass {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Dark theme glass effect */
-[data-theme="dark"] .glass {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Hero section with particles */
-.hero.min-h-screen {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #particles-js {
-        display: none;
-        /* Hide particles on mobile for better performance */
-    }
 }

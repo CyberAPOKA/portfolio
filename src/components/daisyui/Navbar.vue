@@ -12,7 +12,7 @@
                     class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li v-for="item in mobileMenuItems" :key="item.name">
                         <router-link :to="item.path" class="text-base-content hover:text-primary">
-                            {{ item.name }}
+                            {{ $t(item.name) }}
                         </router-link>
                     </li>
                 </ul>
@@ -25,7 +25,7 @@
             <ul class="menu menu-horizontal px-1">
                 <li v-for="item in menuItems" :key="item.name">
                     <router-link :to="item.path" class="text-base-content hover:text-primary">
-                        {{ item.name }}
+                        {{ $t(item.name) }}
                     </router-link>
                 </li>
             </ul>
