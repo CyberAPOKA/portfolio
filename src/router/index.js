@@ -9,27 +9,15 @@ const routes = [
         path: '/',
         component: AppLayout,
         children: [
-            {
-                path: '',
-                name: 'Home',
-                component: Home
-            },
-            {
-                path: '/about',
-                name: 'About',
-                component: About
-            },
-            {
-                path: '/contact',
-                name: 'Contact',
-                component: Contact
-            }
+            { path: '', name: 'Home', component: Home },
+            { path: 'about', name: 'About', component: About },
+            { path: 'contact', name: 'Contact', component: Contact }
         ]
     }
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/portfolio/'),
     routes
 })
 
