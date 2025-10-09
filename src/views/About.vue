@@ -10,7 +10,7 @@ const experiences = ref([
         company: 'Quero Passagem',
         period: '2025',
         description: 'Trabalhei no projeto principal do "Viajo Mucho", é um sistema de venda de passagens de ônibus no méxico.',
-        languages: 'PHP, Python, Laravel, Angular, Docker, Redis, Tailwind, MySQL, PostgreSQL'
+        languages: 'PHP, Python, Laravel, Angular, Docker, Redis, Tailwind, MySQL, PostgreSQL '
     },
     {
         id: 2,
