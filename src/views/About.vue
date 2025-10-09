@@ -9,42 +9,48 @@ const experiences = ref([
         title: 'Desenvolvedor FullStack Senior',
         company: 'Quero Passagem',
         period: '2025',
-        description: 'Trabalhei no projeto principal do "Viajo Mucho", é um sistema de venda de passagens de ônibus no méxico.'
+        description: 'Trabalhei no projeto principal do "Viajo Mucho", é um sistema de venda de passagens de ônibus no méxico.',
+        languages: 'PHP, Python, Laravel, Angular, Docker, Redis, Tailwind, MySQL, PostgreSQL'
     },
     {
         id: 2,
         title: 'Desenvolvedor FullStack Senior',
         company: 'Mad',
         period: '2024',
-        description: 'Trabalhei reescrevendo diversos sistemas internos legados para Laravel, React e Next.js.'
+        description: 'Trabalhei reescrevendo diversos sistemas internos legados para Laravel, React e Next.js.',
+        languages: 'PHP, Laravel, React, Next.js, Node.js, Nest.js, Tailwind, MySQL, PostgreSQL, SQLite, Docker, Redis'
     },
     {
         id: 3,
         title: 'Desenvolvedor FullStack Senior',
         company: 'Agendart',
         period: '2023',
-        description: 'Trabalhei em um projeto apenas que é o sistema do "Agendart", um sistema web de gerenciamento de profissionais da área da saúde.'
+        description: 'Trabalhei em um projeto apenas que é o sistema do "Agendart", um sistema web de gerenciamento de profissionais da área da saúde.',
+        languages: 'PHP, Python, Laravel, Vue, Pinia, PrimeVue, Tailwind, MySQL'
     },
     {
         id: 4,
         title: 'Desenvolvedor FullStack Pleno',
         company: 'GW',
         period: '2020 - 2022',
-        description: 'Trabalhei em projetos grandes como o "Foco Radical" e "Lep", além de aplicativos mobile e outros sistemas menores.'
+        description: 'Trabalhei em projetos grandes como o "Foco Radical" e "Lep", além de aplicativos mobile e outros sistemas menores.',
+        languages: 'PHP, Python, Laravel, Vue, React, Angular, Next.js, Node.js, Nest.js, Tailwind, MySQL, PostgreSQL, SQLite, MongoDB, NoSQL, Redis'
     },
     {
         id: 5,
         title: 'Desenvolvedor FullStack Júnior',
         company: 'Santins',
         period: '2017 - 2019',
-        description: 'Trabalhei em projetos de e-commerce, wordpress, aplicativos mobile e sistemas web variados.'
+        description: 'Trabalhei em projetos de e-commerce, wordpress, aplicativos mobile e sistemas web variados.',
+        languages: 'PHP, Python, Laravel, Vue, React, Next.js, Node.js, Nest.js, Tailwind, MySQL, PostgreSQL, SQLite, MongoDB, NoSQL, Redis'
     },
     {
         id: 6,
         title: 'Estagiário de Desenvolvimento',
         company: 'Prefeitura Municipal de São Leopoldo',
         period: '2015 - 2016',
-        description: 'Desenvolvimento de sistemas web e para a Prefeitura Municipal de São Leopoldo. Projetos internos e públicos do cotidiano dos moradores da região.'
+        description: 'Desenvolvimento de sistemas web e para a Prefeitura Municipal de São Leopoldo. Projetos internos e públicos do cotidiano dos moradores da região.',
+        languages: 'PHP, Laravel, Vue, React, Tailwind, MySQL, PostgreSQL'
     }
 ])
 
@@ -131,6 +137,7 @@ const closeModal = () => {
                             {{ experience.company }} • {{ experience.period }}
                         </p>
                         <p class="text-base-content mt-2">{{ experience.description }}</p>
+                        <p>{{ $t('about.languages') }}: {{ experience.languages }}</p>
                     </div>
                 </div>
             </div>

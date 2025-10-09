@@ -38,7 +38,8 @@ export default {
         funBook: { title: 'Bookworm', desc: 'Always learning' },
         funGym: { title: 'Bodybuilding', desc: 'Discipline and consistency' },
         funSoccer: { title: 'Soccer', desc: 'Passionate about the beautiful game' },
-        years: 'years of experience'
+        years: 'years of experience',
+        languages: 'Languages'
     },
 
     // Contact page
